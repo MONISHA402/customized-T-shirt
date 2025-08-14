@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartoon T-shirts</title>
+    
+    <link href="https://fonts.cdnfonts.com/css/hanuman" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Hanuman', sans-serif;
+  background-color: #fff;
+  color: #070707;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navigation Bar */
+.navbar {
+  background-color:#FF0A0A;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  flex-wrap: wrap;
+  
+}
+
+.navbar nav {
+  display: flex;
+  gap:20px;
+  flex-wrap: wrap;
+  margin-left: 0;
+}
+.navbar nav a {
+  color: #000;
+  font-size: 1.5rem;
+  padding: 25px;
+  font-family: 'Hanuman', sans-serif;
+  font-weight: bold;
+}
+.logo span {
+  position: relative;
+  top: 5px;
+  color: greenyellow;
+  display: inline-block;
+  font-size: 2.1rem;
+  text-shadow: 0 8px 4px blue;
+  animation: bounce 0.4s ease infinite alternate;
+}
+
+h1 span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+h1 span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+h1 span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+h1 span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0% {
+    top: 5px;
+  }
+  100% {
+    top: -20px;
+    text-shadow: 0 1px 0 blue, 0 2px 0 blue, 0 3px 0 rgb(50, 47, 255), 0 4px 0 greenyellow, 0 5px 0 blue;
+  }
+}
+.search-login {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: black;
+}
+.search-box {
+  display: flex;
+  border: 2px solid rgb(245, 230, 230);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 2px 2px 8px #fff;
+}
+.search {  
+  background-color: rgb(249, 214, 214);
+  border: none;
+  outline: none;
+  padding: 16px 36px;
+  width:300px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.5rem;
+  
+}
+.search-login button {
+  color:#101010;
+  font-size: 1.5rem;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  background-color: rgb(249, 214, 214);
+}
+
+.icons {
+  color: black;
+  font-size: 1.5rem;
+  gap: 20px;
+    
+}
+   /* banner */
+ .banner {
+    position: relative;
+    background: url('../image/ultimate-universe.avif') no-repeat center center/cover;
+    height: 400px;
+    width: 100%;
+    border-top: 5px solid red;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    color: white;
+    overflow: hidden;
+  }
+
+    .character {
+      flex: 0 0 auto;
+      margin-right: 340px;
+    }
+
+    .character img {
+      max-height: 250px;
+      width: auto;
+    }
+
+    .text-box {
+      flex: 1;
+    }
+
+    .text-box h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      line-height: 1.5;
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    @media (max-width: 768px) {
+      .banner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .character {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+
+      .text-box h1 {
+        font-size: 2rem;
+      }
+    }
+    /* product grid */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  width: 1500px;
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+}
+
+.product-card img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-card p {
+  margin: 10px 0 5px;
+  font-weight: bold;
+  text-align: left;
+  font-size: 12px;
+  line-height: 0.5;
+}
+.price {
+  color: red;
+  font-size: 12px;
+  text-align: left;
+  display: block;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: darkblue;
+  color: white;
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.badge.red {
+  background: red;
+  color: #fff;
+}
+
+.badge.hot {
+  background: rgb(37, 41, 167);
+  color: #fff;
+}
+
+
+/* Offer Section */
+.offer-banner {
+  margin-top: 50px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px;
+  position: relative;
+}
+
+.offer-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.mascot {
+  width: 250px;
+  height: auto;
+}
+.animation{
+  gap:20px;
+}
+.offer-content h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  font-size: 2.9rem;
+}
+
+.offer-content p {
+  margin: 5px 0 0 0;
+  font-size: 2.2rem;
+}
+.free .highlight{
+  color: red;
+  text-decoration: none;
+  animation: none;
+}
+.highlight {
+  color: red;
+  font-weight: bold;
+}
+.offer-content  span {
+  position: relative;
+  top: 5px;
+  color: greenyellow;
+  display: inline-block;
+  font-size: 2.1rem;
+  text-shadow: 0 8px 4px blue;
+  animation: bounce 0.4s ease infinite alternate;
+}
+
+  h1 span:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+
+  h1 span:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+
+  h1 span:nth-child(4) {
+    animation-delay: 0.3s;
+  }
+
+  h1 span:nth-child(5) {
+    animation-delay: 0.4s;
+  }
+
+  @keyframes bounce {
+    0% {
+      top: 5px;
+    }
+    100% {
+      top: -20px;
+      text-shadow: 0 1px 0 blue, 0 2px 0 blue, 0 3px 0 rgb(50, 47, 255), 0 4px 0 greenyellow, 0 5px 0 blue;
+    }
+  }
+
+  /* Footer Styling */
+.footer {
+  background-color: red;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  padding: 40px 20px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex: 1 1 220px;
+  margin-bottom: 20px;
+}
+
+.footer-column h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.footer-column p {
+  margin: 8px 0;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.footer-social {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.footer-social h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin: 0 10px;
+  transition: transform 0.2s ease;
+}
+
+.footer-social a:hover {
+  transform: scale(1.1);
+}
+
+.footer-social img {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 16px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-column {
+    flex: 1 1 100%;
+  }
+}
+</style>
+  </head>
+<body>
+   <!-- Navigation -->
+  <div class="navbar">
+    <div class="logo">
+      <h1>
+        <span>D</span>
+        <span>A</span>
+        <span>Z</span>
+        <span>Z</span>
+        <span>I</span>
+      </h1>
+    </div>
+
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="Logo.html">Logo</a>
+      <a href="about.html">About Us</a>
+      <a href="Shop.html">Shop</a>
+    </nav>
+
+    <div class="search-login">
+      <div class="search-box">
+        <button><i class="fas fa-search"></i></button>
+        <input type="text" class="search" value="Search">
+      </div>
+      
+      <div class="icons">
+        <a href="login.html">
+            <i class="fas fa-user"></i>
+        </a>
+        <i class="fas fa-cart-shopping"></i>
+      </div>
+
+    </div>
+  </div>
+
+
+ <!-- img -->
+ <div class="banner">
+    <div class="character">
+      
+    </div>
+    <div class="text-box">
+       <h1>Add Your Favorite Cartoon On Your Shirt</h1>
+    </div>
+  </div>
+  <!-- product grid -->
+  <section class="product-grid">
+    <div class="product-card">
+      <span class="badge hot">Limited Stocks</span>
+      <img src="image/Cartoon/1.jpg" alt="Anime Black T Shirt">
+      <p>Lady Anime Black T Shirt</p>
+      <p>Premium T shirt</p>
+      <span class="price">Rs.1,299</span>
+    </div>
+
+    <div class="product-card">
+      <span class="badge red">Ou Stocks</span>
+      <img src="image/Cartoon/2.jpg" alt="Color T Shirt">
+      <p>Anime Blue T Shirt</p>
+      <p>Premium T shirt</p>
+      <span class="price">Rs.2,000</span>
+    </div>
+
+    <div class="product-card">
+      <span class="badge hot">Limited Stocks</span>
+      <img src="image/Cartoon/4.jpg" alt="Dark T Shirt">
+      <p>Lady Anie Black T Shirt</p>
+      <p>Premium T shirt</p>
+      <span class="price">Rs.1,299</span>
+    </div>
+
+    <div class="product-card">
+      <span class="badge hot">Limited Stocks</span>
+      <img src="image/Cartoon/5.jpg" alt="Black Anime T Shirt">
+      <p>Black Anime T Shirt</p>
+      <p>Premium T shirt</p>A
+      <span class="price">Rs.999</span>
+    </div>
+
+    <div class="product-card">
+      <span class="badge red">Ou Stocks</span>
+      <img src="image/Cartoon/6.jpg" alt="Brut Power T Shirt">
+      <p>Black Fiorw girl T Shirt</p>
+      <p>Premium T shirt</p>
+      <span class="price">Rs.2,299</span>
+    </div>
+
+    <div class="product-card">
+      <span class="badge hot">Limited Stocks</span>
+      <img src="image/Cartoon/7.jpg" alt="PurpleAnime T Shirt">
+      <p>Purple Teddy T Shirt</p>
+      <p>Premium T shirt</p>
+      <span class="price">Rs.1,299</span>
+    </div>
+
+    <div class="product-card">
+      <span class="badge hot">Limited Stocks</span>
+      <span class="badge sale">On Sale</span>
+      <img src="image/Cartoon/8.jpg" alt="Karu T Shirt">
+      <p>Kent T Shirt</p>
+      <p>Premium T shirt</p>
+      <span class="price">Rs.2,199</span>
+    </div>
+
+    <div class="product-card">
+    <span class="badge hot">Limited Stocks</span>
+      <img src="image/Cartoon/9.jpg" alt="Glow in Night T Shirt">
+      <p>Glow in Night T Shirt</p>
+      <p>Premium T shirt</p>
+      <span class="price">Rs.1,299</span>
+    </div>
+  </section>
+
+  <!-- Offer Section -->
+  <div class="offer-banner">
+  <div class="offer-content">
+    <img src="image/1647106634_59732.gif" alt="Mascot" class="mascot">
+    <h1>
+      <span>D</span>
+      <span>A</span>
+      <span>Z</span>
+      <span>Z</span>
+      <span>I</span>
+    </h1>
+    <div class="free">
+      <h2>Grab The Exciting Offer</h2>
+      <p>Shop For Rs.999 and get 1 T-Shirt for <span class="highlight">Free</span></p>
+    </div>
+  </div>
+  <div class="limited-time">
+     <img src="image/limited time (1).jpg" alt="limited-time" >
+  </div>
+</div>
+
+<section class="product-grid">
+    <div class="product-card">
+      <span class="badge hot">Limited Stocks</span>
+      <img src="image/Cartoon/10.jpg" alt="Anime Black T Shirt">
+      <p>Lady Black T Shirt</p>
+      <p>Premium T shirt</p>
+      <span class="price">Rs.999</span>
+    </div>
+
+    <div class="product-card">
+      <span class="badge red">Ou Stocks</span>
+      <img src="image/Cartoon/11.jpg" alt="Color T Shirt">
+      <p>Gray T Shirt</p>
+      <p>Premium T shirt</p>
+      <span class="price">$1,299</span>
+    </div>
+
+    <div class="product-card">
+      <span class="badge hot">Limited Stocks</span>
+      <img src="image/Cartoon/12.jpg" alt="Dark T Shirt">
+      <p>Blue front back T Shirt</p>
+      <p>Premium T shirt</p>
+      <span class="price">Rs.2,299</span>
+    </div>
+
+    <div class="product-card">
+      <span class="badge hot">Limited Stocks</span>
+      <img src="image/Cartoon/17.jpg" alt="Black Anime T Shirt">
+      <p>Black Anime T Shirt</p>
+      <span class="price">Rs.999</span>
+    </div>
+
+    <div class="product-card">
+      <span class="badge red">Ou Stocks</span>
+      <img src="image/Cartoon/20.jpg" alt="Brut Power T Shirt">
+      <p>Green and Black T Shirt</p>
+      <p>Premium T shirt</p>
+      <span class="price">Rs.899</span>
+    </div>
+
+    <div class="product-card">
+      <span class="badge hot">Limited Stocks</span>
+      <img src="image/Cartoon/25.jpg" alt="PurpleAnime T Shirt">
+      <p>Dazzi T Shirt</p>
+      <p>Premium T shirt</p>
+      <span class="price">Rs.1,299</span>
+    </div>
+
+    <div class="product-card">
+      <span class="badge hot">Limited Stocks</span>
+      <span class="badge sale">On Sale</span>
+      <img src="image/Cartoon/23.jpg" alt="Karu T Shirt">
+      <p>Ven Black T Shirt</p>
+      <p>Premium T shirt</p>
+      <span class="price">Rs.1,299</span>
+    </div>
+
+    <div class="product-card">
+      <span class="badge hot">Limited Stocks</span>
+      <img src="image/Cartoon/22.jpg" alt="Glow in Night T Shirt">
+      <p>One Piece Black T Shirt</p>
+      <p>Premium T shirt</p>
+      <span class="price">Rs.899</span>
+    </div>
+  </section>
+
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Quick Links -->
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <h3>Contact Us</h3>
+      <h3>FAQ s</h3>
+      <h3>Privacy Policy</h3>
+    </div>
+
+    <!-- Services -->
+    <div class="footer-column">
+      <h3>Service</h3>
+      <h3>Mens T shirt</h3>
+      <h3>Womens T shirt</h3>
+      <h3>Sweat shirt</h3>
+      <h3>Drop Cut</h3>
+    </div>
+
+    <!-- Explore -->
+    <div class="footer-column">
+      <h3>Explore</h3>
+      <h3>About Us</h3>
+      <h3>Contact us</h3>
+    </div>
+
+    <!-- Get in Touch -->
+    <div class="footer-column">
+      <h3>Get in Touch with us</h3>
+      <h3>Reach us :</h3>
+      <h3>support@dazzistores.com</h3>
+    </div>
+  </div>
+
+  <!-- Social Media -->
+  <div class="footer-social">
+    <h3>Connect With Us</h3>
+    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
+     <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube"></a>
+    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a>
+  </div>
+
+  <!-- Bottom Note -->
+  <div class="footer-bottom">
+    Our site uses secure payment gateways. All major credit & debit cards accepted
+  </div>
+</footer>
+</body>
+</html>

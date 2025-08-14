@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Hanuman', sans-serif;
+  background-color: #fff;
+  color: #070707;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navigation Bar */
+.navbar {
+  background-color:#FF0A0A;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  flex-wrap: wrap;
+  
+}
+
+.navbar nav {
+  display: flex;
+  gap:20px;
+  flex-wrap: wrap;
+  margin-left: 0;
+}
+.navbar nav a {
+  color: #000;
+  font-size: 1.5rem;
+  padding: 25px;
+  font-family: 'Hanuman', sans-serif;
+  font-weight: bold;
+}
+h1 span {
+  position: relative;
+  top: 5px;
+  color: greenyellow;
+  display: inline-block;
+  font-size: 2.1rem;
+  text-shadow: 0 8px 4px blue;
+  animation: bounce 0.4s ease infinite alternate;
+}
+
+  h1 span:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+
+  h1 span:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+
+  h1 span:nth-child(4) {
+    animation-delay: 0.3s;
+  }
+
+  h1 span:nth-child(5) {
+    animation-delay: 0.4s;
+  }
+
+  @keyframes bounce {
+    0% {
+      top: 5px;
+    }
+    100% {
+      top: -20px;
+      text-shadow: 0 1px 0 blue, 0 2px 0 blue, 0 3px 0 rgb(50, 47, 255), 0 4px 0 greenyellow, 0 5px 0 blue;
+    }
+  }
+.search-login {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: black;
+}
+.search-box {
+  display: flex;
+  border: 2px solid rgb(245, 230, 230);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 2px 2px 8px #fff;
+}
+.search {  
+  background-color: rgb(249, 214, 214);
+  border: none;
+  outline: none;
+  padding: 16px 36px;
+  width:300px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.5rem;
+  
+}
+.search-login button {
+  color:#101010;
+  font-size: 1.5rem;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  background-color: rgb(249, 214, 214);
+}
+
+.icons {
+  color: black;
+  font-size: 1.5rem;
+  gap: 20px;
+    
+}
+/* banner */
+ .banner {
+  position: relative;
+  background: url('../image/shirt.jpg') no-repeat center center/cover;
+  height: 400px;
+  width: 100%;
+  border-top: 5px solid red;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  color: white;
+  overflow: hidden;
+}
+
+.character {
+  flex: 0 0 auto;
+  margin-right: 40px;
+}
+
+.character img {
+  max-height: 250px;
+  width: auto;
+}
+
+.text-box {
+  flex: 1;
+}
+.text-box h1 {
+  font-size: 4.1rem;
+  font-weight: bold;
+  line-height: 1.5;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .character {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .text-box h1 {
+    font-size: 2rem;
+  }
+}  
+
+/* container */
+.container {
+  display: flex;
+  padding: 20px;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #fff44f;
+  padding: 20px;
+  border-radius: 10px;
+  margin-right: 20px;
+  height: fit-content;
+}
+.sidebar .form-para{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sidebar h3 {
+  margin: 15px 0 5px;
+}
+
+.sidebar label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.sidebar button {
+  margin-top: 10px;
+  background-color: #000;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.main-content {
+  flex: 1;
+  text-align: center;
+}
+
+.products,
+.logos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  gap: 40px;
+}
+
+.product-card,
+.logo-card {
+  position: relative;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.product-card img,
+.logo-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.product-card p,
+.logo-card p {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: left;
+}
+
+.product-card span ,
+.logo-card span{
+  display: block;
+  color: red;
+  font-size: 13px;
+  margin-top: 5px;
+  text-align: left;
+}
+
+.explore-btn {
+  margin: 20px 0;
+  padding: 10px 15px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+ 
+  
+}
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: darkblue;
+  color: white;
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.badge.red {
+  background: red;
+  color: #fff;
+}
+
+.badge.hot {
+  background: rgb(37, 41, 167);
+  color: #fff;
+}
